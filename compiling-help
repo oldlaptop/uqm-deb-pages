@@ -1,0 +1,26 @@
+UQM Debian packages
+
+I provide packages only for Debian Stable on i386 and amd64 for now. Testing/Unstable
+or Ubuntu users, or those using a different architecture (e.g. amd64, ARM, exotic stuff)
+should download and build the source packages. A short howto:
+
+* Install the packages:
+  build-essential debhelper cdbs libsdl1.2-dev libsdl-image1.2-dev zlib1g-dev libogg-dev libvorbis-dev libmikmod2-dev
+
+* Download all files under 'Source' from the userfriendly download page at
+  http://plantmonster.homeip.net/~oldlaptop/uqm-packages/deb/uf/ (the tool dget(1)
+  from package devscripts can help with this)
+
+* Extract each source package with 'dpkg-source -x <file.name.here.dsc>' (dget(1) does
+  this for you)
+
+* Enter each newly unpacked source directory (e.g. uqm-0.7.0) and run
+  'dpkg-buildpackage -us -uc'.
+
+* You now should have one or more .deb packages one level above the source tree,
+  which you can install with dpkg -i <package.deb>.
+
+* Finally, note that, while you really should build all packages on your distro,
+  you will probably be able to get away with skipping uqm-content and instead using
+  the content .debs available here. If this causes problems, build the packages
+  yourself before complaining :).
