@@ -8,7 +8,7 @@ should download and build the source packages. A short howto:
   build-essential debhelper cdbs libsdl1.2-dev libsdl-image1.2-dev zlib1g-dev libogg-dev libvorbis-dev libmikmod2-dev
 
 * Download all files under 'Source' from the userfriendly download page at
-  http://plantmonster.homeip.net/~oldlaptop/uqm-packages/deb/uf/ (the tool dget(1)
+  http://plantmonster.servebeer.com/~oldlaptop/uqm-packages/deb/uf/ (the tool dget(1)
   from package devscripts can help with this)
 
 * Extract each source package with 'dpkg-source -x <file.name.here.dsc>' (dget(1) does
